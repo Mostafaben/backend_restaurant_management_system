@@ -7,7 +7,7 @@ import router from "./src/http/routers/index.router";
 import httpErrorHandlerService from "./src/core/services/http_error.service";
 import HttpCodeError from "./src/core/enums/http_response_code.enum";
 import HttpError from "./src/utils/http_error.class";
-import fileMangerService from "./src/core/services/file_manager.service";
+import "./src/models";
 
 // express instance
 const app = express();
