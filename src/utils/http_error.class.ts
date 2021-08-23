@@ -1,19 +1,17 @@
-import HttpCodeError from "../core/enums/http_response_code.enum";
+import HttpResponseCode from "../core/enums/http_response_code.enum"
 
 export default class HttpError extends Error {
-  private code: number;
-  constructor(
-    message: string,
-    code: HttpCodeError = HttpCodeError.BAD_REQUEST
-  ) {
-    super(message);
-    this.code = code;
-  }
-  set setCode(code: number) {
-    this.code = code;
-  }
+	private code: number
+	constructor(message: string, code: HttpResponseCode = HttpResponseCode.BAD_REQUEST) {
+		super(message)
+		this.code = code
+		console.log(this.code)
+	}
+	set setCode(code: number) {
+		this.code = code
+	}
 
-  get getCode(): number {
-    return this.code;
-  }
+	get getCode(): number {
+		return this.code
+	}
 }

@@ -1,3 +1,4 @@
+import Category from "./category/category.model"
 import Food from "./food/food.model"
 import FoodImage from "./food/food_image.model"
 import Ingredient from "./ingredient/ingredient.model"
@@ -10,12 +11,15 @@ import UserResetPassword from "./user/user_reset_password.model"
 import UserValidation from "./user/user_validation.model"
 
 // food relations
-Food.hasMany(Ingredient)
+Food.belongsToMany(Ingredient, { through: "Food_Ingredients" })
 Food.hasMany(FoodImage)
+Food.belongsToMany(Category, { through: "Food_Categories" })
+Category.belongsToMany(Food, { through: "Food_Categories" })
 
 //order relations
+OrderFood.belongsTo(Food)
 OrderFood.hasMany(FoodOrderExtra)
-Order.belongsToMany(Food, { through: OrderFood })
+Order.hasMany(OrderFood)
 Order.belongsTo(User)
 Order.belongsTo(User)
 

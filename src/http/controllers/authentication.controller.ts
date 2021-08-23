@@ -1,17 +1,19 @@
 import { Response, Request } from "express"
 
-class AuthenticationController {
-	constructor() {}
+const login = async (request: Request, response: Response) => {}
+const signUp = async (request: Request, response: Response) => {}
+const refreshToken = async (request: Request, response: Response) => {}
+const resetPassword = async (request: Request, response: Response) => {}
+const validateAccount = async (request: Request, response: Response) => {}
+const resetPasswordRequest = async (request: Request, response: Response) => {}
+const validateAccountRequest = async (request: Request, response: Response) => {}
 
-	login(request: Request, response: Response) {}
-	signUp(request: Request, response: Response) {}
-	refreshToken(request: Request, response: Response) {}
-	resetPassword(request: Request, response: Response) {}
-	validateAccount(request: Request, response: Response) {}
-	resetPasswordRequest(request: Request, response: Response) {}
-	validateAccountRequest(request: Request, response: Response) {}
+export {
+	login,
+	signUp,
+	refreshToken,
+	resetPassword,
+	resetPasswordRequest,
+	validateAccount,
+	validateAccountRequest,
 }
-
-const authenticationController = new AuthenticationController()
-Object.freeze(authenticationController)
-export default authenticationController

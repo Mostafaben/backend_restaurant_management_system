@@ -8,7 +8,7 @@ const Category = db.define("Category", {
 		unique: true,
 	},
 	iconUrl: { type: DataTypes.STRING, allowNull: false },
-	iconName: { type: DataTypes.STRING, allowNull: false },
+	iconPath: { type: DataTypes.STRING, allowNull: false },
 })
 
 export default Category

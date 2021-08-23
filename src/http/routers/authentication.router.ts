@@ -1,6 +1,5 @@
 import { Router } from "express"
-import authenticationController from "../controllers/authentication.controller"
-const {
+import {
 	login,
 	signUp,
 	refreshToken,
@@ -8,7 +7,7 @@ const {
 	resetPasswordRequest,
 	validateAccount,
 	validateAccountRequest,
-} = authenticationController
+} from "../controllers/authentication.controller"
 
 const router = Router()
 
